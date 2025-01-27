@@ -17,7 +17,7 @@ INSERT INTO Pacientes (nombre, telefono, correo) VALUES
 -- Tabla para registrar especialistas
 CREATE TABLE Especialistas (
     id_especialista INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
+    nombre VARCHAR(25) NOT NULL,
     especialidad ENUM('Salud General', 'Cancerología', 'Odontología') NOT NULL
 );
 
@@ -34,8 +34,6 @@ CREATE TABLE Citas (
     id_cita INT AUTO_INCREMENT PRIMARY KEY,
     id_paciente INT NOT NULL,
     id_especialista INT NOT NULL,
-    fecha_programacion DATE NOT NULL,
-    hora_programacion TIME NOT NULL,
     fecha_cita DATE NOT NULL,
     hora_cita TIME NOT NULL,
     FOREIGN KEY (id_paciente) REFERENCES Pacientes(id_paciente),
