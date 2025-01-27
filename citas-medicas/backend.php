@@ -97,7 +97,7 @@ function createAppointment($pdo, $pacienteId, $especialistaId, $fecha, $hora) {
   <?php
   // Insertar cita si el formulario es enviado
   if (isset($_POST['confirm-appointment'])) {
-    $pacienteId = 1; // ID del paciente (esto debería ser dinámico)
+    $pacienteId = 1; // ID del paciente 
     $especialistaId = $_POST['doctor']; // Se pasa desde el JavaScript al formulario
     $fecha = $_POST['date'];
     $hora = $_POST['time']; // Se pasa desde el JavaScript al formulario
